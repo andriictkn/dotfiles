@@ -5,17 +5,7 @@ Colourful & robust configuration files and utilities for Mac, Linux and BSD. Ins
 curl -L https://git.io/pmdot | sh
 ```
 
-The short URL expands to GitHub-hosted `install.sh`,
-and then `etc/symlink-dotfiles.sh`,
-which can be easily audited.
-
-## Usage
-
-- **MacOS:** Ensure you have XCode or dev tools. It can be downloaded from the app store.
-    - Optionally `sh etc/bootstrap-macos.sh`
-- **Linux and BSD:** Ensure you have `git` and `zsh` installed.
-- **MacOS terminal:** `terminal/macos-term/monokai_pro_spectrum.terminal` (Settings -> Profiles -> Press "gear" -> Import).
-- **Git:** Don't forget to adjust `home/.gitconfig` or you'll have improper commit author
+The short URL expands to GitHub-hosted `./install.sh`, and then `./etc/symlink-dotfiles.sh`, which can be easily audited.
 
 ## Features
 
@@ -45,6 +35,32 @@ which can be easily audited.
 * Sets terminal tab and window title to current directory
 * [homesick](https://github.com/technicalpickles/homesick) /
   [homeshick](https://github.com/andsens/homeshick)-compatible
+
+## Git setup
+
+Specify git author:
+
+```sh
+git config --global user.name "Diogenes of Sinope"
+git config --global user.email "diogenes@barrel.com"
+```
+
+Enable GPG commit signing:
+
+```sh
+git config --global commit.gpgsign true
+git config --global tag.gpgSign true
+git config --global user.signingkey 697079DA6878B89B
+# instead of 697079DA6878B89B, use specific key fingerprint
+```
+
+Instead of gnupg, there a lightweight gpgkp can optionally be used.
+Set [gpgkp from key-producer](http://github.com/paulmillr/micro-key-producer) as preferred signing program:
+
+```sh
+# npm install --global micro-key-producer
+git config --global gpg.program $(which gpgkp)
+```
 
 ## License
 

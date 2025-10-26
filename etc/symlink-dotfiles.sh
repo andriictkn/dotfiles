@@ -25,6 +25,10 @@ for location in $(find home -name '.*'); do
   link "$dotfiles/$location" "$HOME/$file"
 done
 
+echo "Initializing fresh git config in '$HOME/.gitconfig'"
+rm -f $HOME/.gitconfig
+cp -r $dotfiles/home/.gitconfig $HOME/.gitconfig
+
 link $dotfiles/vim $HOME/.vim
 unm=$(uname)
 if [ $unm = 'Darwin' ]; then

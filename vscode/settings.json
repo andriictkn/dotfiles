@@ -110,5 +110,8 @@
   },
   "workbench.preferredLightColorTheme": "Monokai Pro Light (Filter Sun)",
   "files.trimTrailingWhitespaceInRegexAndStrings": false,
-  "editor.lineNumbers": "off"
+  "editor.lineNumbers": "off",
+  "telemetry.editStats.enabled": false,
+  "telemetry.feedback.enabled": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
