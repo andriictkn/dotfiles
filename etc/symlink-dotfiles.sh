@@ -1,7 +1,7 @@
 #!/bin/sh
 
-dev="$HOME/Developer"
-dotfiles="$dev/personal/dotfiles"
+dev="$HOME/dev"
+dotfiles="$dev/dotfiles"
 
 echo ""
 if [ -d "$dotfiles" ]; then
@@ -24,19 +24,3 @@ for location in $(find home -name '.*'); do
   file="${file%.sh}"
   link "$dotfiles/$location" "$HOME/$file"
 done
-
-echo "Initializing fresh git config in '$HOME/.gitconfig'"
-rm -f $HOME/.gitconfig
-cp -r $dotfiles/home/.gitconfig $HOME/.gitconfig
-
-link $dotfiles/vim $HOME/.vim
-unm=$(uname)
-if [ $unm = 'Darwin' ]; then
-  vsdir="$HOME/Library/Application Support/Code/User"
-else
-  vsdir="$HOME/.vscode"
-fi
-
-if [ -d "$vsdir" ]; then
-  link "$dotfiles/vscode/settings.json" "$vsdir/settings.json"
-fi

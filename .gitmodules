@@ -4,6 +4,9 @@
 [submodule "terminal/highlight"]
 	path = terminal/highlight
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "terminal/autosuggestions"]
+	path = terminal/autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "vim"]
 	path = vim
 	url = https://github.com/paulmillr/dotfiles-vim.git

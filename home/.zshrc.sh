@@ -8,6 +8,7 @@ curr="$pm/dotfiles"
 source "$curr/terminal/startup.sh"
 source "$curr/terminal/completion.sh"
 source "$curr/terminal/highlight.sh"
+source "$curr/terminal/autosuggestions/zsh-autosuggestions.zsh"
 # echo "Load end\t" $(gdate "+%s-%N")
 
 autoload -U colors && colors

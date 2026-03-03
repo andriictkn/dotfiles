@@ -8,8 +8,7 @@ typeset -gU cdpath fpath mailpath manpath path
 typeset -gUT INFOPATH infopath
 
 # Commonly used directories.
-dev="$HOME/Developer"
-pm="$dev/personal"
+dev="$HOME/dev"
 
 # path=($HOME/.cargo/bin /usr/local/opt/ruby/bin $path) # changing .zshenv doesn't work
 if [ -f "/opt/homebrew/bin/brew" ]; then
