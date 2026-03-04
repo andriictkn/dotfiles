@@ -17,10 +17,9 @@ log "Running symlink script"
 sh etc/symlink-dotfiles.sh
 
 log "Starting Homebrew install"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/tty
 log "Finished Homebrew install"
 
-log "Loading Homebrew into current shell"
 if [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
 	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 elif [ -x /opt/homebrew/bin/brew ]; then
