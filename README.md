@@ -7,7 +7,9 @@ curl -L https://raw.githubusercontent.com/andriictkn/dotfiles/refs/heads/master/
 
 The short URL expands to GitHub-hosted `./install.sh`, and then `./etc/symlink-dotfiles.sh`, which can be easily audited.
 
-
+> ### 🚧 This fork contains a simpler verion of dot files with followinf modificaitons: 
+>- removed vscode/vim configs
+>- added brew/nvm/node/sdkman and java setup
 
 ## Features
 
