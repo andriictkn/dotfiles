@@ -40,7 +40,7 @@ curl -s "https://get.sdkman.io" | bash
 log "Finished sdkman install"
 
 log "Loading sdkman into current shell"
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+. "$HOME/.sdkman/bin/sdkman-init.sh"
 
 log "Installing Java via sdkman"
 sdk install java
