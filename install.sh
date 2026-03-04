@@ -20,19 +20,6 @@ log "Starting Homebrew install"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/tty
 log "Finished Homebrew install"
 
-if [ -x /home/linuxbrew/.linuxbrew/bin/brew ]; then
-	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-elif [ -x /opt/homebrew/bin/brew ]; then
-	eval "$(/opt/homebrew/bin/brew shellenv)"
-elif [ -x /usr/local/bin/brew ]; then
-	eval "$(/usr/local/bin/brew shellenv)"
-fi
-
-command -v brew >/dev/null 2>&1 || {
-	log "Homebrew installation did not complete successfully"
-	exit 1
-}
-
 log "Installing node via brew"
 brew install node
 log "Finished installing node"
