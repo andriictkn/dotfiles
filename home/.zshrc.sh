@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-curr="$pm/dotfiles"
+curr="$dev/dotfiles"
 
 # Load main files.
 # To benchmark startup: brew install coreutils, uncomment lines
