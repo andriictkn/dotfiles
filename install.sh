@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -eu
-
 log() {
 	printf '[install] %s\n' "$1"
 }
