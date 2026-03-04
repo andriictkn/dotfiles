@@ -20,6 +20,13 @@ log "Starting Homebrew install"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" </dev/tty
 log "Finished Homebrew install"
 
+log "Loading Homebrew into current shell"
+if [ -x /opt/homebrew/bin/brew ]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+	eval "$(/usr/local/bin/brew shellenv)"
+fi
+
 log "Installing node via brew"
 brew install node
 log "Finished installing node"
@@ -31,6 +38,13 @@ log "Finished nvm install"
 log "Starting sdkman install"
 curl -s "https://get.sdkman.io" | bash
 log "Finished sdkman install"
+
+log "Loading sdkman into current shell"
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+log "Installing Java via sdkman"
+sdk install java
+log "Finished installing Java"
 
 # Optional: remove .git directories
 # rm -rf .git vim/.git terminal/completion/.git terminal/highlight/.git terminal/autosuggestions/.git .gitmodules
