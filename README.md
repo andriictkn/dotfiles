@@ -2,10 +2,12 @@
 Colourful & robust configuration files and utilities for Mac, Linux and BSD. Installation is done with a simple command:
 
 ```sh
-curl -L https://git.io/pmdot | sh
+curl -L https://raw.githubusercontent.com/andriictkn/dotfiles/refs/heads/master/install.sh | sh
 ```
 
 The short URL expands to GitHub-hosted `./install.sh`, and then `./etc/symlink-dotfiles.sh`, which can be easily audited.
+
+
 
 ## Features
 
@@ -31,7 +33,6 @@ The short URL expands to GitHub-hosted `./install.sh`, and then `./etc/symlink-d
     * `git url` - opens GitHub repo for current git repo.
     * `git-changelog`, `git-setup` etc.
 * `etc` — MacOS fine tuning
-* `vscode` — Sublime Text theme & settings
 * Sets terminal tab and window title to current directory
 * [homesick](https://github.com/technicalpickles/homesick) /
   [homeshick](https://github.com/andsens/homeshick)-compatible
