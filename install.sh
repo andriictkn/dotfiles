@@ -25,10 +25,6 @@ elif [ -x /usr/local/bin/brew ]; then
 	eval "$(/usr/local/bin/brew shellenv)"
 fi
 
-log "Installing node via brew"
-brew install node
-log "Finished installing node"
-
 log "Starting nvm install"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 log "Finished nvm install"
@@ -43,6 +39,10 @@ log "Loading sdkman into current shell"
 log "Installing Java via sdkman"
 sdk install java
 log "Finished installing Java"
+
+log "Installing node via brew"
+brew install node
+log "Finished installing node"
 
 # Optional: remove .git directories
 # rm -rf .git vim/.git terminal/completion/.git terminal/highlight/.git terminal/autosuggestions/.git .gitmodules
